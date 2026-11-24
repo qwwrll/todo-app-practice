@@ -1,0 +1,15 @@
+extends layout.pug
+
+block title
+  title Список справ
+
+block content
+  h1 Список справ
+  ul
+    each task in tasks
+      li
+        if task.completed
+          s= task.title
+          |  — Виконано
+        else
+          span= task.title
